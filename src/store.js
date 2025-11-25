@@ -39,6 +39,7 @@ export default function storeReducer(store, action = {}) {
       const { item, favorited } = action.payload
 
       if (favorited) {
+        sessionStorage.setItem("favorites", [...store.favorites, item])
         return {
           ...store,
           favorites: [...store.favorites, item]
@@ -47,11 +48,12 @@ export default function storeReducer(store, action = {}) {
         let newFavorites = store.favorites?.filter((favorites, item) => {
           if (item != favorited) return favorites
         })
+        sessionStorage.setItem("favorites", newFavorites)
         return {
         ...store,
         favorites: newFavorites
       }};
-
+      
     default:
       throw Error('Unknown action.');
   }    
