@@ -5,9 +5,23 @@ import { Link } from 'react-router-dom';
 export const Card = (props) => {
 	
     const [favorites, setFavorites] = useState(false);
+    const {store, dispatch} = useGlobalReducer();
+
+    useEffect (() => {
+        let favorited = store.favorites.filter((favorite) => {
+            return favorite = props.name
+        })
+        if (favorited.length > 0) {
+            setFavorites(true);
+        }
+    })
 
     const toggleFavorites = () => {
         setFavorites(!favorites);
+        dispatch({
+            type: 'toggleFavorites',
+            payload: {item: props.name, adding: favorites}
+        })
     }
 
     return (
