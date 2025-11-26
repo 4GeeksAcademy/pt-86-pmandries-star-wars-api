@@ -36,22 +36,18 @@ export default function storeReducer(store, action = {}) {
 
     case 'toggleFavorites':
 
-      const { item, favorited } = action.payload
+      const { name, uid, type } = action.payload
 
-      if (favorited) {
-        sessionStorage.setItem("favorites", [...store.favorites, item])
+      if (!store.favorites.some(element => element.name === name)) {
         return {
           ...store,
-          favorites: [...store.favorites, item]
+          favorites: [...store.favorites, action.payload]
         };
       } else {
-        let newFavorites = store.favorites?.filter((favorites, item) => {
-          if (item != favorited) return favorites
-        })
-        sessionStorage.setItem("favorites", newFavorites)
+        let removedFavorites = store.favorites?.filter(favorites => favorites.name != name)
         return {
         ...store,
-        favorites: newFavorites
+        favorites: removedFavorites
       }};
       
     default:
