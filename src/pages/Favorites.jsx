@@ -23,8 +23,8 @@ export const Favorites = () => {
     }, [store.favorites]);
 
     return (
-        <div className="text-center mt-5">
-            <h1>This is the Favorites Page</h1>
+        <div className="text-center mt-5" style = {{marginBottom: 100}}>
+            <h1>Favorites Page</h1>
             <div className = "d-flex col-10 overflow-auto mt-5 mx-auto">
                 {favorites?.map((favorites, index) => {
                     return <CharacterCard key = {index} uid = {favorites.uid} name = {favorites.name} />

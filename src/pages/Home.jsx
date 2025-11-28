@@ -40,18 +40,27 @@ export const Home = () => {
   }, [store.starships])
 
 	return (
-		<div className="text-center mt-5">
-			<div className = "d-flex col-10 overflow-auto mt-5 mx-auto">
+		<div className="text-center mt-5" style = {{marginBottom: 100}}>
+			<div className = "bg-light mt-5">
+				<h1>Characters</h1>
+			</div>
+			<div className = "d-flex col-10 overflow-auto mt-3 mx-auto">
 				{characters?.map((character, index) => {
 					return <CharacterCard key = {index} uid = {character.uid} name = {character.name} />
 				})}
-			</div>	
-			<div className = "d-flex col-10 overflow-auto mt-5 mx-auto">
+			</div>
+			<div className = "bg-light mt-5">
+				<h1>Species</h1>
+			</div>
+			<div className = "d-flex col-10 overflow-auto mt-3 mx-auto">
 				{species?.map((species, index) => {
 					return <SpeciesCard key = {index} uid = {species.uid} name = {species.name} />
 				})}
 			</div>
-			<div className = "d-flex col-10 overflow-auto mt-5 mx-auto">
+			<div className = "bg-light mt-5">
+				<h1>Starships</h1>
+			</div>
+			<div className = "d-flex col-10 overflow-auto mt-3 mx-auto">
 				{starships?.map((starships, index) => {
 					return <StarshipsCard key = {index} uid = {starships.uid} name = {starships.name} />
 				})}

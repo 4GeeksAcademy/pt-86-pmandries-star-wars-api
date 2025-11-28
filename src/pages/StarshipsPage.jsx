@@ -27,27 +27,27 @@ export const StarshipsPage = (props) => {
                     <div className = "">
                         <h3>Name: {starships.name}</h3>
                     </div>
-                    {/* <div className = "">
-                        <h3>Birth Year: {character.birth_year}</h3>
+                    <div className = "">
+                        <h3>Cargo Capacity: {starships.cargo_capacity}</h3>
                     </div>
                     <div className = "">
-                        <h3>Gender: {character.gender}</h3>
+                        <h3>Passengers {starships.passengers}</h3>
                     </div>
                     <div className = "">
-                        <h3>Eye Color: {character.eye_color}</h3>
+                        <h3>Crew: {starships.crew}</h3>
                     </div>
                     <div className = "">
-                        <h3>Hair Color: {character.hair_color}</h3>
+                        <h3>Model: {starships.model}</h3>
                     </div>
                     <div className = "">
-                        <h3>Skin Color: {character.skin_color}</h3>
+                        <h3>Cost in Credits: {starships.cost_in_credits}</h3>
                     </div>
                     <div className = "">
-                        <h3>Height: {character.height}</h3>
+                        <h3>Starship Class: {starships.starship_class}</h3>
                     </div>
                     <div className = "">
-                        <h3>Mass: {character.mass}</h3>
-                    </div> */}
+                        <h3>Hyperdrive Rating: {starships.hyperdrive_rating}</h3>
+                    </div>
                 </div>
             </div>
         </div>

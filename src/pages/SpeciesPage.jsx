@@ -27,27 +27,27 @@ export const SpeciesPage = (props) => {
                     <div className = "">
                         <h3>Name: {species.name}</h3>
                     </div>
-                    {/* <div className = "">
-                        <h3>Birth Year: {character.birth_year}</h3>
+                    <div className = "">
+                        <h3>Classification: {species.classification}</h3>
                     </div>
                     <div className = "">
-                        <h3>Gender: {character.gender}</h3>
+                        <h3>Designation: {species.designation}</h3>
                     </div>
                     <div className = "">
-                        <h3>Eye Color: {character.eye_color}</h3>
+                        <h3>Eye Colors: {species.eye_colors}</h3>
                     </div>
                     <div className = "">
-                        <h3>Hair Color: {character.hair_color}</h3>
+                        <h3>Hair Colors: {species.hair_colors}</h3>
                     </div>
                     <div className = "">
-                        <h3>Skin Color: {character.skin_color}</h3>
+                        <h3>Skin Colors: {species.skin_colors}</h3>
                     </div>
                     <div className = "">
-                        <h3>Height: {character.height}</h3>
+                        <h3>Language: {species.language}</h3>
                     </div>
                     <div className = "">
-                        <h3>Mass: {character.mass}</h3>
-                    </div> */}
+                        <h3>Average Lifespan: {species.average_lifespan}</h3>
+                    </div>
                 </div>
             </div>
         </div>
