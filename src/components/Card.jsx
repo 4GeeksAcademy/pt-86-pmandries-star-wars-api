@@ -19,7 +19,7 @@ export const CharacterCard = (props) => {
         <div className="card-body">
             <h5 className="card-title">{props.name}
                 <i 
-                    className={store.favorites.some(element => element.name === props.name) ? "mx-2 fa-solid fa-heart" : "mx-2 fa-regular fa-heart"}
+                    className={store.favorites?.some(element => element.name === props.name) ? "mx-2 fa-solid fa-heart" : "mx-2 fa-regular fa-heart"}
                     onClick = { () => toggleFavorites()}>
                 </i></h5>
             <Link to = {"character_page/" + props.uid}>
